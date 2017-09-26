@@ -120,8 +120,8 @@ public:
         nPruneAfterHeight = 100000;
 // compute the nNonce 
 /*
-	for(uint32_t ii=0;ii<500000;ii++) {
-		genesis = CreateGenesisBlock(GENESIS_BLOCK_TIME, ii, 0x1e0ffff0, 1, 0 * COIN);
+	for(uint32_t ii=1500000;ii<3000000;ii++) {
+		genesis = CreateGenesisBlock(GENESIS_BLOCK_TIME, ii, 0x1e0ffff0, 1, 50 * COIN);
 		//1505470905 Fri Sep 15 18:21:45 CST 2017
 		consensus.hashGenesisBlock = genesis.GetHash();
 		LogPrintf("nNonce=%9u,hash=%s,MerkleRoot=%s\n",ii,consensus.hashGenesisBlock.GetHex(),genesis.hashMerkleRoot.GetHex());
@@ -130,7 +130,7 @@ public:
 	}
 */
 //
-        genesis = CreateGenesisBlock(GENESIS_BLOCK_TIME, GENESIS_BLOCK_NONCE, 0x1e0ffff0, 1, 0 * COIN);
+        genesis = CreateGenesisBlock(GENESIS_BLOCK_TIME, GENESIS_BLOCK_NONCE, 0x1e0ffff0, 1, 50 * COIN);
         consensus.hashGenesisBlock = genesis.GetHash();
         assert(consensus.hashGenesisBlock == uint256S(GENESIS_BLOCK_HASH));
         assert(genesis.hashMerkleRoot == uint256S(GENESIS_BLOCK_MERKLE));
