@@ -1,0 +1,14 @@
+sudo apt-get update
+sudo apt-get install g++-mingw-w64-i686 mingw-w64-i686-dev g++-mingw-w64-x86-64 mingw-w64-x86-64-dev
+sudo apt-get install make
+sudo apt-get install build-essential
+sudo apt-get install autogen
+sudo apt-get install automake
+sudo apt-get install autoreconf
+sudo apt-get install libtool
+sudo apt-get install pkg-config
+sudo apt-get install libdb++-dev
+sudo apt-get install libboost-dev libboost-dbg libboost-doc libboost-*
+sudo apt-get install libssl-dev
+sudo apt-get install libevent-dev
+
