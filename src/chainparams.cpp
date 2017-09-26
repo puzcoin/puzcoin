@@ -4,7 +4,7 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#include <stdio.h>
+//#include <stdio.h>
 #include "globals.h"
 #include "chainparams.h"
 #include "consensus/merkle.h"
@@ -119,21 +119,21 @@ public:
         nMaxTipAge = 6 * 60 * 60; // ~144 blocks behind -> 2 x fork detection time, was 24 * 60 * 60 in bitcoin
         nPruneAfterHeight = 100000;
 // compute the nNonce 
-
+/*
 	for(uint32_t ii=0;ii<500000;ii++) {
-		genesis = CreateGenesisBlock(1505470905, ii, 0x1e0ffff0, 1, 50 * COIN);
+		genesis = CreateGenesisBlock(GENESIS_BLOCK_TIME, ii, 0x1e0ffff0, 1, 0 * COIN);
 		//1505470905 Fri Sep 15 18:21:45 CST 2017
 		consensus.hashGenesisBlock = genesis.GetHash();
 		LogPrintf("nNonce=%9u,hash=%s,MerkleRoot=%s\n",ii,consensus.hashGenesisBlock.GetHex(),genesis.hashMerkleRoot.GetHex());
 		if(ii%10000 == 0)
 			printf("%9u\n",ii);
 	}
-
+*/
 //
-        genesis = CreateGenesisBlock(GENESIS_BLOCK_TIME, GENESIS_BLOCK_NONCE, 0x1e0ffff0, 1, 50 * COIN);
+        genesis = CreateGenesisBlock(GENESIS_BLOCK_TIME, GENESIS_BLOCK_NONCE, 0x1e0ffff0, 1, 0 * COIN);
         consensus.hashGenesisBlock = genesis.GetHash();
-//        assert(consensus.hashGenesisBlock == uint256S(GENESIS_BLOCK_HASH));
-//        assert(genesis.hashMerkleRoot == uint256S(GENESIS_BLOCK_MERKLE));
+        assert(consensus.hashGenesisBlock == uint256S(GENESIS_BLOCK_HASH));
+        assert(genesis.hashMerkleRoot == uint256S(GENESIS_BLOCK_MERKLE));
 
         vSeeds.push_back(CDNSSeedData("23.91.97.27", "23.91.97.27"));//ucloud-hk-ubuntu
 	vSeeds.push_back(CDNSSeedData("106.75.99.86", "106.75.99.86"));//ucloud-bj-ubuntu
