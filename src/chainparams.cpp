@@ -120,11 +120,10 @@ public:
         nPruneAfterHeight = 100000;
 // compute the nNonce 
 /*
-	for(uint32_t ii=1500000;ii<3000000;ii++) {
+	for(uint32_t ii=1500000;ii<2000000;ii++) {
 		genesis = CreateGenesisBlock(GENESIS_BLOCK_TIME, ii, 0x1e0ffff0, 1, 50 * COIN);
-		//1505470905 Fri Sep 15 18:21:45 CST 2017
 		consensus.hashGenesisBlock = genesis.GetHash();
-		LogPrintf("nNonce=%9u,hash=%s,MerkleRoot=%s\n",ii,consensus.hashGenesisBlock.GetHex(),genesis.hashMerkleRoot.GetHex());
+		LogPrintf("nNonce = %9u, hash = %s, MerkleRoot = %s\n",ii,consensus.hashGenesisBlock.GetHex(),genesis.hashMerkleRoot.GetHex());
 		if(ii%10000 == 0)
 			printf("%9u\n",ii);
 	}
@@ -132,8 +131,9 @@ public:
 //
         genesis = CreateGenesisBlock(GENESIS_BLOCK_TIME, GENESIS_BLOCK_NONCE, 0x1e0ffff0, 1, 50 * COIN);
         consensus.hashGenesisBlock = genesis.GetHash();
-        assert(consensus.hashGenesisBlock == uint256S(GENESIS_BLOCK_HASH));
-        assert(genesis.hashMerkleRoot == uint256S(GENESIS_BLOCK_MERKLE));
+	LogPrintf("nNonce = %9u, hash = %s, MerkleRoot = %s\n",GENESIS_BLOCK_NONCE,consensus.hashGenesisBlock.GetHex(),genesis.hashMerkleRoot.GetHex());
+//        assert(consensus.hashGenesisBlock == uint256S(GENESIS_BLOCK_HASH));
+//        assert(genesis.hashMerkleRoot == uint256S(GENESIS_BLOCK_MERKLE));
 
         vSeeds.push_back(CDNSSeedData("23.91.97.27", "23.91.97.27"));//ucloud-hk-ubuntu
 	vSeeds.push_back(CDNSSeedData("106.75.99.86", "106.75.99.86"));//ucloud-bj-ubuntu
