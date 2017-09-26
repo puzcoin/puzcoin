@@ -1764,6 +1764,22 @@ CAmount GetBlockSubsidy(int nPrevBits, int nPrevHeight, const Consensus::Params&
         nSubsidyBase = MINING_REWARD-MINING_REDUSE*(8-1);
     } else if(nPrevHeight < PREMINING_STOP_BLOCK + 9*MINING_REDUSE_BLOCKS){
         nSubsidyBase = MINING_REWARD-MINING_REDUSE*(9-1);
+    } else if(nPrevHeight < PREMINING_STOP_BLOCK + 10*MINING_REDUSE_BLOCKS){
+        nSubsidyBase = MINING_REWARD-MINING_REDUSE*(10-1);
+    } else if(nPrevHeight < PREMINING_STOP_BLOCK + 11*MINING_REDUSE_BLOCKS){
+        nSubsidyBase = MINING_REWARD-MINING_REDUSE*(11-1);
+    } else if(nPrevHeight < PREMINING_STOP_BLOCK + 12*MINING_REDUSE_BLOCKS){
+        nSubsidyBase = MINING_REWARD-MINING_REDUSE*(12-1);
+    } else if(nPrevHeight < PREMINING_STOP_BLOCK + 13*MINING_REDUSE_BLOCKS){
+        nSubsidyBase = MINING_REWARD-MINING_REDUSE*(13-1);
+    } else if(nPrevHeight < PREMINING_STOP_BLOCK + 14*MINING_REDUSE_BLOCKS){
+        nSubsidyBase = MINING_REWARD-MINING_REDUSE*(14-1);
+    } else if(nPrevHeight < PREMINING_STOP_BLOCK + 15*MINING_REDUSE_BLOCKS){
+        nSubsidyBase = MINING_REWARD-MINING_REDUSE*(15-1);
+    } else if(nPrevHeight < PREMINING_STOP_BLOCK + 16*MINING_REDUSE_BLOCKS){
+        nSubsidyBase = MINING_REWARD-MINING_REDUSE*(16-1);
+    } else if(nPrevHeight < PREMINING_STOP_BLOCK + 17*MINING_REDUSE_BLOCKS){
+        nSubsidyBase = MINING_REWARD-MINING_REDUSE*(17-1);
     } else {
 	nSubsidyBase = 0;
     }
