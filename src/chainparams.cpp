@@ -4,7 +4,7 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-//#include <stdio.h>
+#include <stdio.h>
 #include "globals.h"
 #include "chainparams.h"
 #include "consensus/merkle.h"
@@ -119,8 +119,8 @@ public:
         nMaxTipAge = 6 * 60 * 60; // ~144 blocks behind -> 2 x fork detection time, was 24 * 60 * 60 in bitcoin
         nPruneAfterHeight = 100000;
 // compute the nNonce 
-/*
-	for(uint32_t ii=500000;ii<1000000;ii++) {
+
+	for(uint32_t ii=0;ii<500000;ii++) {
 		genesis = CreateGenesisBlock(1505470905, ii, 0x1e0ffff0, 1, 50 * COIN);
 		//1505470905 Fri Sep 15 18:21:45 CST 2017
 		consensus.hashGenesisBlock = genesis.GetHash();
@@ -128,19 +128,18 @@ public:
 		if(ii%10000 == 0)
 			printf("%9u\n",ii);
 	}
-*/
+
 //
         genesis = CreateGenesisBlock(GENESIS_BLOCK_TIME, GENESIS_BLOCK_NONCE, 0x1e0ffff0, 1, 50 * COIN);
         consensus.hashGenesisBlock = genesis.GetHash();
-        assert(consensus.hashGenesisBlock == uint256S(GENESIS_BLOCK_HASH));
-        assert(genesis.hashMerkleRoot == uint256S(GENESIS_BLOCK_MERKLE));
+//        assert(consensus.hashGenesisBlock == uint256S(GENESIS_BLOCK_HASH));
+//        assert(genesis.hashMerkleRoot == uint256S(GENESIS_BLOCK_MERKLE));
 
         vSeeds.push_back(CDNSSeedData("23.91.97.27", "23.91.97.27"));//ucloud-hk-ubuntu
 	vSeeds.push_back(CDNSSeedData("106.75.99.86", "106.75.99.86"));//ucloud-bj-ubuntu
-	vSeeds.push_back(CDNSSeedData("23.248.162.212", "23.248.162.212"));//ucloud-hk-windows
-	vSeeds.push_back(CDNSSeedData("107.150.124.159", "107.150.124.159"));//ucloud-hk-windows-orange
-	vSeeds.push_back(CDNSSeedData("nodelb1.puzcoin.com","nodelb1.puzcoin.com"));//node-slb-1-hk
-	vSeeds.push_back(CDNSSeedData("nodelb2.puzcoin.com","nodelb2.puzcoin.com"));//node-slb-2-europe
+	vSeeds.push_back(CDNSSeedData("seed1.puzcoin.com","seed1.puzcoin.com"));//seed-1-hk
+	vSeeds.push_back(CDNSSeedData("seed2.puzcoin.com","seed2.puzcoin.com"));//seed-2-europe
+	vSeeds.push_back(CDNSSeedData("seed3.puzcoin.com","seed3.puzcoin.com"));//seed-3-america
 
         // Dash addresses start with 'R'
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>PREFIXES_PUBKEY_ADDRESS;
