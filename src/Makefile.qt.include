@@ -559,9 +559,9 @@ CLEAN_QT = $(nodist_qt_libbitcoinqt_a_SOURCES) $(QT_QM) $(QT_FORMS_H) qt/*.gcda 
 CLEANFILES += $(CLEAN_QT)
 
 dash_qt_clean: FORCE
-	rm -f $(CLEAN_QT) $(qt_libbitcoinqt_a_OBJECTS) $(qt_dash_qt_OBJECTS) qt/dash-qt$(EXEEXT) $(LIBBITCOINQT)
+	rm -f $(CLEAN_QT) $(qt_libbitcoinqt_a_OBJECTS) $(qt_dash_qt_OBJECTS) qt/puzcoin-qt$(EXEEXT) $(LIBBITCOINQT)
 
-dash_qt : qt/dash-qt$(EXEEXT)
+dash_qt : qt/puzcoin-qt$(EXEEXT)
 
 ui_%.h: %.ui
 	@test -f $(UIC)
