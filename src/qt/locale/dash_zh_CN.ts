@@ -1160,17 +1160,17 @@ Address: %4
     <message>
         <location line="+7"/>
         <source>Start &amp;MISSING</source>
-        <translation>Start &amp;MISSING</translation>
+        <translation>启动掉线的</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>&amp;Update status</source>
-        <translation>&amp;Update status</translation>
+        <translation>&amp;更新状态</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Status will be updated automatically in (sec):</source>
-        <translation>Status will be updated automatically in (sec):</translation>
+        <translation>状态将于 (sec) 后更新:</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -1181,12 +1181,12 @@ Address: %4
     <message>
         <location line="-97"/>
         <source>All Masternodes</source>
-        <translation>All Masternodes</translation>
+        <translation>全部主节点</translation>
     </message>
     <message>
         <location line="+63"/>
         <source>Filter List:</source>
-        <translation>Filter List:</translation>
+        <translation>过滤器:</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -1200,48 +1200,48 @@ Address: %4
     </message>
     <message>
         <location filename="../masternodelist.cpp" line="+50"/>
-        <source>Start alias</source>
+        <source>启动</source>
         <translation>Start alias</translation>
     </message>
     <message>
         <location line="+278"/>
         <source>Confirm masternode start</source>
-        <translation>Confirm masternode start</translation>
+        <translation>确认启动</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Are you sure you want to start masternode %1?</source>
-        <translation>Are you sure you want to start masternode %1?</translation>
+        <translation>确认要启动主节点 %1吗？</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Confirm all masternodes start</source>
-        <translation>Confirm all masternodes start</translation>
+        <translation>确认全部启动</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Are you sure you want to start ALL masternodes?</source>
-        <translation>Are you sure you want to start ALL masternodes?</translation>
+        <translation>确认启动全部主节点吗？</translation>
     </message>
     <message>
         <location line="+24"/>
         <source>Command is not available right now</source>
-        <translation>Command is not available right now</translation>
+        <translation>现在指令不能被执行</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>You can&apos;t use this command until masternode list is synced</source>
-        <translation>You can&apos;t use this command until masternode list is synced</translation>
+        <translation>主节点数据同步中，指令无法执行</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Confirm missing masternodes start</source>
-        <translation>Confirm missing masternodes start</translation>
+        <translation>确认启动掉线的主节点</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Are you sure you want to start MISSING masternodes?</source>
-        <translation>Are you sure you want to start MISSING masternodes?</translation>
+        <translation>确认启动被忽略的主节点吗？</translation>
     </message>
 </context>
 <context>
