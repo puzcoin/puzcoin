@@ -1621,6 +1621,10 @@ https://www.transifex.com/projects/p/puzcoin/</translation>
         <translation>开始/关闭 混合</translation>
     </message>
     <message>
+        <source>PrivateSend Balance:</source>
+        <translation>私密余额：</translation>
+    </message>
+    <message>
 	<source>Stop Mining( Mining now)</source>
 	<translation>关闭挖矿（当前正在挖）</translation>
     </message>
