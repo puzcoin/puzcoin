@@ -1572,6 +1572,11 @@ https://www.transifex.com/projects/p/puzcoin/</translation>
         <translation>可花费:</translation>
     </message>
     <message>
+        <source>PrivateSend</source>
+        <translation>私密发送</translation>
+    </message>
+
+    <message>
         <source>Status:</source>
         <translation>状态:</translation>
     </message>
@@ -1615,6 +1620,15 @@ https://www.transifex.com/projects/p/puzcoin/</translation>
         <source>Start/Stop Mixing</source>
         <translation>开始/关闭 混合</translation>
     </message>
+    <message>
+	<source>Stop Mining( Mining now)</source>
+	<translation>关闭挖矿（当前正在挖）</translation>
+    </message>
+    <message>
+        <source>Start Mining( Not mining now)</source>
+        <translation>开始挖矿（当前没在挖）</translation>
+    </message>
+
     <message>
         <source>The denominations you submitted to the Masternode.&lt;br&gt;To mix, other users must submit the exact same denominations.</source>
         <translation>您向主节点所提交的用以面额化混合的PUZCOIN,&lt;br&gt;当其他用户提交相同的面额化PUZCOIN数量时,将开始混合.</translation>
