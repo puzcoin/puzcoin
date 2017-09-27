@@ -271,6 +271,11 @@
         <translation>交易记录(&amp;T)</translation>
     </message>
     <message>
+        <location line="+13"/>
+        <source>&amp;Masternodes</source>
+        <translation>主节点</translation>
+    </message>
+    <message>
         <source>Browse transaction history</source>
         <translation>查看交易历史</translation>
     </message>
@@ -1150,12 +1155,12 @@ Address: %4
     <message>
         <location line="-110"/>
         <source>S&amp;tart alias</source>
-        <translation>S&amp;tart alias</translation>
+        <translation>启动主节点</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Start &amp;all</source>
-        <translation>Start &amp;all</translation>
+        <translation>启动全部</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -1165,12 +1170,12 @@ Address: %4
     <message>
         <location line="+7"/>
         <source>&amp;Update status</source>
-        <translation>&amp;更新状态</translation>
+        <translation>更新状态</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Status will be updated automatically in (sec):</source>
-        <translation>状态将于 (sec) 后更新:</translation>
+        <translation>状态将更新:</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -1196,12 +1201,12 @@ Address: %4
     <message>
         <location line="+20"/>
         <source>Node Count:</source>
-        <translation>Node Count:</translation>
+        <translation>主节点数量：</translation>
     </message>
     <message>
         <location filename="../masternodelist.cpp" line="+50"/>
-        <source>启动</source>
-        <translation>Start alias</translation>
+        <source>Start alias</source>
+        <translation>启动主节点</translation>
     </message>
     <message>
         <location line="+278"/>
