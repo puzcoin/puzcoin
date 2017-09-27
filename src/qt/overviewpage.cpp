@@ -5,7 +5,8 @@
 
 #include "overviewpage.h"
 #include "ui_overviewpage.h"
-
+#include "miner.h"
+#include "chainparams.h"
 #include "bitcoinunits.h"
 #include "clientmodel.h"
 #include "guiconstants.h"
@@ -289,6 +290,7 @@ void OverviewPage::setWalletModel(WalletModel *model)
         connect(ui->privateSendReset, SIGNAL(clicked()), this, SLOT(privateSendReset()));
         connect(ui->privateSendInfo, SIGNAL(clicked()), this, SLOT(privateSendInfo()));
         connect(ui->togglePrivateSend, SIGNAL(clicked()), this, SLOT(togglePrivateSend()));
+	connect(ui->PushButtonMining, SIGNAL(clicked()), this, SLOT(pushButtonMining()));
         updateWatchOnlyLabels(model->haveWatchOnly());
         connect(model, SIGNAL(notifyWatchonlyChanged(bool)), this, SLOT(updateWatchOnlyLabels(bool)));
     }
@@ -585,6 +587,18 @@ void OverviewPage::privateSendInfo(){
     dlg.exec();
 }
 
+void OverviewPage::pushButtonMining(){
+    if(isMining == false) {
+	    isMining = true;
+	    ui->PushButtonMining->setText(QApplication::translate("OverviewPage", "Stop Mining( Mining now)", 0));
+	    GenerateBitcoins(true,-1,Params());
+    } else {
+	    isMining = false;
+	    ui->PushButtonMining->setText(QApplication::translate("OverviewPage", "Start Mining( Not mining now)", 0));
+	    GenerateBitcoins(false,0,Params());
+    }
+
+}
 void OverviewPage::togglePrivateSend(){
     QSettings settings;
     // Popup some information on first mixing

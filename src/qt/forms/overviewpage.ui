@@ -637,6 +637,13 @@
         </widget>
        </item>
        <item>
+        <widget class="QPushButton" name="PushButtonMining">
+         <property name="text">
+          <string>Start Mining( Not mining now)</string>
+         </property>
+        </widget>
+       </item>
+       <item>
         <spacer name="verticalSpacer">
          <property name="orientation">
           <enum>Qt::Vertical</enum>

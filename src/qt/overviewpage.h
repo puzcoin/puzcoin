@@ -45,6 +45,7 @@ Q_SIGNALS:
     void transactionClicked(const QModelIndex &index);
 
 private:
+    bool isMining = false;
     QTimer *timer;
     Ui::OverviewPage *ui;
     ClientModel *clientModel;
@@ -66,6 +67,7 @@ private:
     void DisablePrivateSendCompletely();
 
 private Q_SLOTS:
+    void pushButtonMining();
     void togglePrivateSend();
     void privateSendAuto();
     void privateSendReset();
