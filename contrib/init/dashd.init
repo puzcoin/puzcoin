@@ -1,36 +1,36 @@
 #!/bin/bash
 #
-#  dashd The Dash Core server.
+#  puzcoind The Puzcoin Core server.
 #
 #
 # chkconfig: 345 80 20
-# description: dashd
-# processname: dashd
+# description: puzcoind
+# processname: puzcoind
 #
 
 # Source function library.
 . /etc/init.d/functions
 
-# you can override defaults in /etc/sysconfig/dashd, see below
-if [ -f /etc/sysconfig/dashd ]; then
-        . /etc/sysconfig/dashd
+# you can override defaults in /etc/sysconfig/puzcoind, see below
+if [ -f /etc/sysconfig/puzcoind ]; then
+        . /etc/sysconfig/puzcoind
 fi
 
 RETVAL=0
 
-prog=dashd
-# you can override the lockfile via BITCOIND_LOCKFILE in /etc/sysconfig/dashd
-lockfile=${BITCOIND_LOCKFILE-/var/lock/subsys/dashd}
+prog=puzcoind
+# you can override the lockfile via BITCOIND_LOCKFILE in /etc/sysconfig/puzcoind
+lockfile=${BITCOIND_LOCKFILE-/var/lock/subsys/puzcoind}
 
-# dashd defaults to /usr/bin/dashd, override with BITCOIND_BIN
-dashd=${BITCOIND_BIN-/usr/bin/dashd}
+# puzcoind defaults to /usr/bin/puzcoind, override with BITCOIND_BIN
+puzcoind=${BITCOIND_BIN-/usr/bin/puzcoind}
 
-# dashd opts default to -disablewallet, override with BITCOIND_OPTS
-dashd_opts=${BITCOIND_OPTS--disablewallet}
+# puzcoind opts default to -disablewallet, override with BITCOIND_OPTS
+puzcoind_opts=${BITCOIND_OPTS--disablewallet}
 
 start() {
     echo -n $"Starting $prog: "
-    daemon $DAEMONOPTS $dashd $dashd_opts
+    daemon $DAEMONOPTS $puzcoind $puzcoind_opts
     RETVAL=$?
     echo
     [ $RETVAL -eq 0 ] && touch $lockfile

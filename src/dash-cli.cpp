@@ -1,6 +1,6 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
 // Copyright (c) 2009-2015 The Bitcoin Core developers
-// Copyright (c) 2014-2017 The Dash Core developers
+// Copyright (c) 2014-2017 The Puzcoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -78,9 +78,9 @@ static int AppInitRPC(int argc, char* argv[])
         std::string strUsage = _("Puzcoin Core RPC client version") + " " + FormatFullVersion() + "\n";
         if (!mapArgs.count("-version")) {
             strUsage += "\n" + _("Usage:") + "\n" +
-                  "  dash-cli [options] <command> [params]  " + _("Send command to Dash Core") + "\n" +
-                  "  dash-cli [options] help                " + _("List commands") + "\n" +
-                  "  dash-cli [options] help <command>      " + _("Get help for a command") + "\n";
+                  "  puzcoin-cli [options] <command> [params]  " + _("Send command to Puzcoin Core") + "\n" +
+                  "  puzcoin-cli [options] help                " + _("List commands") + "\n" +
+                  "  puzcoin-cli [options] help <command>      " + _("Get help for a command") + "\n";
 
             strUsage += "\n" + HelpMessageCli();
         }

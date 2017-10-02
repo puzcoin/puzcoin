@@ -1,5 +1,5 @@
 // Copyright (c) 2011-2015 The Bitcoin Core developers
-// Copyright (c) 2014-2017 The Dash Core developers
+// Copyright (c) 2014-2017 The Puzcoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -19,9 +19,9 @@ BitcoinUnits::BitcoinUnits(QObject *parent):
 QList<BitcoinUnits::Unit> BitcoinUnits::availableUnits()
 {
     QList<BitcoinUnits::Unit> unitlist;
-    unitlist.append(DASH);
-    unitlist.append(mDASH);
-    unitlist.append(uDASH);
+    unitlist.append(PUZCOIN);
+    unitlist.append(mPUZCOIN);
+    unitlist.append(uPUZCOIN);
     unitlist.append(duffs);
     return unitlist;
 }
@@ -30,9 +30,9 @@ bool BitcoinUnits::valid(int unit)
 {
     switch(unit)
     {
-    case DASH:
-    case mDASH:
-    case uDASH:
+    case PUZCOIN:
+    case mPUZCOIN:
+    case uPUZCOIN:
     case duffs:
         return true;
     default:
@@ -46,9 +46,9 @@ QString BitcoinUnits::name(int unit)
     {
         switch(unit)
         {
-            case DASH: return QString("PUZCOIN");
-            case mDASH: return QString("mPUZCOIN");
-            case uDASH: return QString::fromUtf8("μPUZCOIN");
+            case PUZCOIN: return QString("PUZCOIN");
+            case mPUZCOIN: return QString("mPUZCOIN");
+            case uPUZCOIN: return QString::fromUtf8("μPUZCOIN");
             case duffs: return QString("duffs");
             default: return QString("???");
         }
@@ -57,9 +57,9 @@ QString BitcoinUnits::name(int unit)
     {
         switch(unit)
         {
-            case DASH: return QString("tPUZCOIN");
-            case mDASH: return QString("mtPUZCOIN");
-            case uDASH: return QString::fromUtf8("μtPUZCOIN");
+            case PUZCOIN: return QString("tPUZCOIN");
+            case mPUZCOIN: return QString("mtPUZCOIN");
+            case uPUZCOIN: return QString::fromUtf8("μtPUZCOIN");
             case duffs: return QString("tduffs");
             default: return QString("???");
         }
@@ -72,9 +72,9 @@ QString BitcoinUnits::description(int unit)
     {
         switch(unit)
         {
-            case DASH: return QString("Puzcoin");
-            case mDASH: return QString("Milli-Puzcoin (1 / 1" THIN_SP_UTF8 "000)");
-            case uDASH: return QString("Micro-Puzcoin (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
+            case PUZCOIN: return QString("Puzcoin");
+            case mPUZCOIN: return QString("Milli-Puzcoin (1 / 1" THIN_SP_UTF8 "000)");
+            case uPUZCOIN: return QString("Micro-Puzcoin (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
             case duffs: return QString("Ten Nano-Puzcoin (1 / 100" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
             default: return QString("???");
         }
@@ -83,9 +83,9 @@ QString BitcoinUnits::description(int unit)
     {
         switch(unit)
         {
-            case DASH: return QString("TestPuzcoins");
-            case mDASH: return QString("Milli-TestPuzcoin (1 / 1" THIN_SP_UTF8 "000)");
-            case uDASH: return QString("Micro-TestPuzcoin (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
+            case PUZCOIN: return QString("TestPuzcoins");
+            case mPUZCOIN: return QString("Milli-TestPuzcoin (1 / 1" THIN_SP_UTF8 "000)");
+            case uPUZCOIN: return QString("Micro-TestPuzcoin (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
             case duffs: return QString("Ten Nano-TestPuzcoin (1 / 100" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
             default: return QString("???");
         }
@@ -96,9 +96,9 @@ qint64 BitcoinUnits::factor(int unit)
 {
     switch(unit)
     {
-    case DASH:  return 100000000;
-    case mDASH: return 100000;
-    case uDASH: return 100;
+    case PUZCOIN:  return 100000000;
+    case mPUZCOIN: return 100000;
+    case uPUZCOIN: return 100;
     case duffs: return 1;
     default:   return 100000000;
     }
@@ -108,9 +108,9 @@ int BitcoinUnits::decimals(int unit)
 {
     switch(unit)
     {
-    case DASH: return 8;
-    case mDASH: return 5;
-    case uDASH: return 2;
+    case PUZCOIN: return 8;
+    case mPUZCOIN: return 5;
+    case uPUZCOIN: return 2;
     case duffs: return 0;
     default: return 0;
     }
