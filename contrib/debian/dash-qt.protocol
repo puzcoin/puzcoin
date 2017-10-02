@@ -1,6 +1,6 @@
 [Protocol]
-exec=dash-qt '%u'
-protocol=dash
+exec=puzcoin-qt '%u'
+protocol=puzcoin
 input=none
 output=none
 helper=true

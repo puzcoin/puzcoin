@@ -1,6 +1,6 @@
 // Copyright (c) 2010 Satoshi Nakamoto
 // Copyright (c) 2009-2015 The Bitcoin Core developers
-// Copyright (c) 2014-2017 The Dash Core developers
+// Copyright (c) 2014-2017 The Puzcoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -342,7 +342,7 @@ static const CRPCCommand vRPCCommands[] =
     { "hidden",             "resendwallettransactions", &resendwallettransactions, true},
 #endif
 
-    /* Dash features */
+    /* Puzcoin features */
     { "puzcoin",               "masternode",             &masternode,             true  },
     { "puzcoin",               "masternodelist",         &masternodelist,         true  },
     { "puzcoin",               "masternodebroadcast",    &masternodebroadcast,    true  },

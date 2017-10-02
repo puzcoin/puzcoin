@@ -1,15 +1,15 @@
 [Unit]
-Description=Dash's distributed currency daemon
+Description=Puzcoin's distributed currency daemon
 After=network.target
 
 [Service]
-User=dashcore
-Group=dashcore
+User=puzcoincore
+Group=puzcoincore
 
 Type=forking
-PIDFile=/var/lib/dashd/dashd.pid
-ExecStart=/usr/bin/dashd -daemon -pid=/var/lib/dashd/dashd.pid \
--conf=/etc/dashcore/dash.conf -datadir=/var/lib/dashd -disablewallet
+PIDFile=/var/lib/puzcoind/puzcoind.pid
+ExecStart=/usr/bin/puzcoind -daemon -pid=/var/lib/puzcoind/puzcoind.pid \
+-conf=/etc/puzcoincore/puzcoin.conf -datadir=/var/lib/puzcoind -disablewallet
 
 Restart=always
 PrivateTmp=true

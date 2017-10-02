@@ -8,7 +8,7 @@
 #else
 #define UNUSED
 #endif
-static const char UNUSED *dash_strings[] = {
+static const char UNUSED *puzcoin_strings[] = {
 QT_TRANSLATE_NOOP("puzcoin-core", ""
 "(1 = keep tx meta data e.g. account owner and payment request information, 2 "
 "= drop tx meta data)"),
@@ -51,7 +51,7 @@ QT_TRANSLATE_NOOP("puzcoin-core", ""
 "Delete all wallet transactions and only recover those parts of the "
 "blockchain through -rescan on startup"),
 QT_TRANSLATE_NOOP("puzcoin-core", ""
-"Disable all Dash specific functionality (Masternodes, PrivateSend, "
+"Disable all Puzcoin specific functionality (Masternodes, PrivateSend, "
 "InstantSend, Governance) (0-1, default: %u)"),
 QT_TRANSLATE_NOOP("puzcoin-core", ""
 "Discover own IP addresses (default: 1 when listening and no -externalip or -"
