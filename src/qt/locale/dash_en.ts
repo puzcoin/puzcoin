@@ -309,8 +309,8 @@
     <message>
         <location filename="../bitcoingui.cpp" line="+127"/>
         <location line="+919"/>
-        <source>Puzcoin Core</source>
-        <translation>Puzcoin Core</translation>
+        <source>Puzcoin Core(www.puzcoin.com)</source>
+        <translation>Puzcoin Core(www.puzcoin.com)</translation>
     </message>
     <message>
         <location line="-910"/>

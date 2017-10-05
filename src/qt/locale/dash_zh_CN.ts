@@ -231,8 +231,8 @@
 <context>
     <name>BitcoinGUI</name>
     <message>
-        <source>Puzcoin Core</source>
-        <translation>普慈币核心</translation>
+        <source>Puzcoin Core(www.puzcoin.com)</source>
+        <translation>普慈币核心(www.puzcoin.com)</translation>
     </message>
     <message>
         <source>Wallet</source>
