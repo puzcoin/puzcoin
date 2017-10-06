@@ -2,5 +2,6 @@
     <qresource prefix="/translations">
         <file alias="en">locale/dash_en.qm</file>
         <file alias="zh_CN">locale/dash_zh_CN.qm</file>
+	<file alias="zh_CN">locale/dash_ru.qm</file>
     </qresource>
 </RCC>
