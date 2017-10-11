@@ -5,6 +5,7 @@
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #include "miner.h"
+#include "globals.h"
 
 #include "amount.h"
 #include "chain.h"
@@ -448,7 +449,11 @@ void static BitcoinMiner(const CChainParams& chainparams)
             // Search
             //
             int64_t nStart = GetTime();
-            arith_uint256 hashTarget = arith_uint256().SetCompact(pblock->nBits);
+            arith_uint256 hashTarget;
+	    if((pindexPrev->nHeight + 1) >= FORCE_MASTERNODE_PAYEE_BLOCKHEIGHT && (pindexPrev->nHeight + 1)<= FORCE_MASTERNODE_PAYEE_BLOCKHEIGHT+1000) 
+            	hashTarget = arith_uint256().SetCompact(0x1e0ffff0/*pblock->nBits*/);
+	    else
+		hashTarget = arith_uint256().SetCompact(pblock->nBits);
             while (true)
             {
                 unsigned int nHashesDone = 0;

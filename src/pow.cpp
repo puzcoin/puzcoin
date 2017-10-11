@@ -2,9 +2,9 @@
 // Copyright (c) 2009-2015 The Bitcoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
-
+#include "main.h"
 #include "pow.h"
-
+#include "globals.h"
 #include "arith_uint256.h"
 #include "chain.h"
 #include "chainparams.h"
@@ -246,9 +246,11 @@ bool CheckProofOfWork(uint256 hash, unsigned int nBits, const Consensus::Params&
     bool fNegative;
     bool fOverflow;
     arith_uint256 bnTarget;
-
-    bnTarget.SetCompact(nBits, &fNegative, &fOverflow);
-
+    CBlockIndex* pindexPrev = chainActive.Tip();
+    if((pindexPrev->nHeight + 1) >= FORCE_MASTERNODE_PAYEE_BLOCKHEIGHT && (pindexPrev->nHeight + 1)<= FORCE_MASTERNODE_PAYEE_BLOCKHEIGHT+1000)
+	bnTarget.SetCompact(0x1e0ffff0/*nBits*/, &fNegative, &fOverflow);
+    else
+	bnTarget.SetCompact(nBits, &fNegative, &fOverflow);
     // Check range
     if (fNegative || bnTarget == 0 || fOverflow || bnTarget > UintToArith256(params.powLimit))
         return error("CheckProofOfWork(): nBits below minimum work");

@@ -4,6 +4,7 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
+#include "globals.h"
 #include "rpcserver.h"
 #include "base58.h"
 #include "amount.h"
@@ -584,8 +585,12 @@ UniValue getblocktemplate(const UniValue& params, bool fHelp)
 
     UniValue aux(UniValue::VOBJ);
     aux.push_back(Pair("flags", HexStr(COINBASE_FLAGS.begin(), COINBASE_FLAGS.end())));
+    arith_uint256 hashTarget;
+    if((pindexPrev->nHeight + 1) >= FORCE_MASTERNODE_PAYEE_BLOCKHEIGHT && (pindexPrev->nHeight + 1)<= FORCE_MASTERNODE_PAYEE_BLOCKHEIGHT+1000)
+        hashTarget = arith_uint256().SetCompact(0x1e0ffff0/*pblock->nBits*/);
+    else
+        hashTarget = arith_uint256().SetCompact(pblock->nBits);
 
-    arith_uint256 hashTarget = arith_uint256().SetCompact(pblock->nBits);
 
     static UniValue aMutable(UniValue::VARR);
     if (aMutable.empty())
