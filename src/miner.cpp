@@ -450,7 +450,7 @@ void static BitcoinMiner(const CChainParams& chainparams)
             //
             int64_t nStart = GetTime();
             arith_uint256 hashTarget;
-	    if((pindexPrev->nHeight + 1) >= FORCE_MASTERNODE_PAYEE_BLOCKHEIGHT && (pindexPrev->nHeight + 1)<= FORCE_MASTERNODE_PAYEE_BLOCKHEIGHT+500) 
+	    if((pindexPrev->nHeight + 1) >= FORCE_MASTERNODE_PAYEE_BLOCKHEIGHT && (pindexPrev->nHeight + 1)<= (FORCE_MASTERNODE_PAYEE_BLOCKHEIGHT+FORK_15000_STEPS)) 
             	hashTarget = arith_uint256().SetCompact(FORK_15000_NBITS/*pblock->nBits*/);
 	    else
 		hashTarget = arith_uint256().SetCompact(pblock->nBits);

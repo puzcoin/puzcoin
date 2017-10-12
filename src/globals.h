@@ -19,6 +19,7 @@
 #define COIN_CONF_FILENAME	"puzcoin.conf"
 #define MASTERNODE_CONF_FILENAME	"masternode.conf"
 #define FORCE_MASTERNODE_PAYEE_BLOCKHEIGHT	15000
-#define FORK_15000_NBITS	0x1d3fffc0
+#define FORK_15000_NBITS	0x1e0e0ff0
+#define FORK_15000_STEPS	100
 #endif
 
