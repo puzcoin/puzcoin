@@ -587,7 +587,7 @@ UniValue getblocktemplate(const UniValue& params, bool fHelp)
     aux.push_back(Pair("flags", HexStr(COINBASE_FLAGS.begin(), COINBASE_FLAGS.end())));
     arith_uint256 hashTarget;
     if((pindexPrev->nHeight + 1) >= FORCE_MASTERNODE_PAYEE_BLOCKHEIGHT && (pindexPrev->nHeight + 1)<= FORCE_MASTERNODE_PAYEE_BLOCKHEIGHT+1000)
-        hashTarget = arith_uint256().SetCompact(0x1e0ffff0/*pblock->nBits*/);
+        hashTarget = arith_uint256().SetCompact(0x1c02b074/*pblock->nBits*/);
     else
         hashTarget = arith_uint256().SetCompact(pblock->nBits);
 

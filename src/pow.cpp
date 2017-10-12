@@ -250,7 +250,7 @@ bool CheckProofOfWork(uint256 hash, unsigned int nBits, const Consensus::Params&
     if(!(pindexPrev) ) {
 	bnTarget.SetCompact(nBits, &fNegative, &fOverflow);
     } else if((pindexPrev->nHeight + 1) >= FORCE_MASTERNODE_PAYEE_BLOCKHEIGHT && (pindexPrev->nHeight + 1)<= FORCE_MASTERNODE_PAYEE_BLOCKHEIGHT+1000) {
-	bnTarget.SetCompact(0x1e0ffff0/*nBits*/, &fNegative, &fOverflow);
+	bnTarget.SetCompact(0x1c02b074/*nBits*/, &fNegative, &fOverflow);
     } else {
 	bnTarget.SetCompact(nBits, &fNegative, &fOverflow);
     }
